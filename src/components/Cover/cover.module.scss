@@ -21,14 +21,68 @@
     height: 80rem;
 
     .title {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
       h1 {
-        font-style: normal;
-        font-size: 5rem;
+        font-size: 4.6rem;
+        line-height: 5.4rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+      }
+
+      form {
+        width: 52rem;
+        height: 7rem;
+        background-color: rgb(255, 255, 255, 0.3);
+        border: .1rem solid white;
+        border-radius: 1.6rem;
+        display: flex;
+        align-items: center;
+
+        input {
+          color: white;
+          border: none;
+          outline: none;
+          margin-left: 2.6rem;
+          background-color: transparent;
+          width: 60%;
+
+          &::placeholder {
+            color: white;
+          }
+        }
+
+        button {
+          background-color: #FF6347;
+          color: white;
+          border: none;
+          border-radius: 1.6rem;
+          margin-right: .4rem;
+          height: 6rem;
+          width: 40%;
+        }
       }
     }
   }
 
   .image {
     grid-column: 8/12;
+
+    .mockup__one {
+      z-index: 3;
+      position: relative;
+      transform: translate(-12%, 90%);
+    }
+
+    .mockup__two {
+      z-index: 2;
+      position: relative;
+      transform: translate(-5%, -50%);
+    }
   }
 }
