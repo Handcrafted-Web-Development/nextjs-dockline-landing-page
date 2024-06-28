@@ -1,0 +1,35 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, auto) repeat(10, minmax(0, calc((1440px - (2rem * 11)) / 12))) minmax(0, auto);
+  grid-auto-columns: auto;
+  grid-auto-rows: min-content;
+  grid-auto-flow: dense;
+  column-gap: 2rem;
+  padding-top: 3.2rem;
+
+  .logo {
+    grid-column: 2/3;
+    display: flex;
+    justify-self: start;
+    align-items: center;
+
+    .baseline {
+      transform: translateX(-1.6rem);
+    }
+  }
+
+  .navigation {
+    grid-column: 10/12;
+    display: flex;
+    justify-content: end;
+
+    .contact {
+      color: white;
+      border: solid .1rem white;
+      border-radius: .8rem;
+      font-size: 1.6rem;
+      padding: 1.6rem .8rem;
+      cursor: pointer;
+    }
+  }
+}
