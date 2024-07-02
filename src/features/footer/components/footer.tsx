@@ -2,15 +2,17 @@ import Image from "next/image";
 import {ReactElement} from "react";
 import footer from "../styles/footer.module.scss";
 import { Kulim_Park } from "next/font/google";
-import header from "@/features/header/styles/header.module.scss";
+import {useTranslations} from "next-intl";
 
-const kulimPark = Kulim_Park({ subsets: ["latin"], weight: ["400"] });
 
 export default function Cover(): ReactElement {
+  const kulimPark = Kulim_Park({ subsets: ["latin"], weight: ["400"] });
+  const translated = useTranslations("Footer");
+
   return (
       <section className={footer.wrapper}>
         <div className={footer.title}>
-          <h2>Optimiser la gestion, prévenez l'abandon</h2>
+          <h2>{translated("title")}</h2>
         </div>
         <div className={footer.container}>
           <div className={footer.logo}>
