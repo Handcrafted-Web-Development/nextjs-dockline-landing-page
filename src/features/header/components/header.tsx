@@ -1,10 +1,10 @@
 import Image from "next/image";
 import {ReactElement} from "react";
-import header from './header.module.scss';
+import header from '../styles/header.module.scss';
 
 export default function Header(): ReactElement {
   return (
-      <header className={header.wrapper}>
+      <div className={header.wrapper}>
         <div className={header.logo}>
           <Image
               src="/logo.svg"
@@ -27,6 +27,6 @@ export default function Header(): ReactElement {
             Contactez-nous
           </a>
         </div>
-      </header>
+      </div>
   );
 }

@@ -1,6 +1,6 @@
 import {ReactElement} from "react";
 import {Readex_Pro} from "next/font/google";
-import cover from "./cover.module.scss";
+import cover from "../styles/cover.module.scss";
 import Image from "next/image";
 
 const readexPro = Readex_Pro({subsets: ["latin"], weight: "400"});
@@ -21,6 +21,9 @@ export default function Cover(): ReactElement {
               <input className={"newsletter"} type={"email"} placeholder={"Votre adresse e-mail..."}/>
               <button type={"submit"}>Tester gratuitement</button>
             </form>
+            <div>
+              <a href="/public">Faire une demande de devis (gratuit)</a>
+            </div>
           </div>
         </div>
         <div className={cover.image}>
